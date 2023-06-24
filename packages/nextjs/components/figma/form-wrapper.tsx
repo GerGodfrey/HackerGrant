@@ -10,8 +10,6 @@ import {
   Select,
 } from "@mui/material";
 import Link from "next/link";
-import QuickNodeApi from '../../../apis/quicknode.js'
-import {query_ia} from '../../../apis/langchain.js'
 import { Octokit } from "@octokit/rest";
 
 
@@ -52,7 +50,18 @@ const FormWrapper: NextPage = () => {
     console.log("OWNER", owner);
     const octokit = new Octokit({ auth : "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"});
 
-    let jsonData = {}  
+    let jsonData = {
+      user_name : null,
+      followers : null,
+      following : null,
+      public_repos : null,
+      location : null,
+      updated_at : null,
+      balanceInfo : null,
+      programing_languages : "",
+      code_size : 0,
+    }  
+
     try {
         const response = await octokit.request(`GET /users/${owner}`);
         const data = response.data
@@ -94,28 +103,97 @@ const FormWrapper: NextPage = () => {
       }
   }
 
+  async function wallet_getTrxInfo(wallet_address: string) {
+    const url = "https://smart-weathered-dust.matic.discover.quiknode.pro/31357e42cb90b2324a86a66b7b3b7db79e0e2808/"
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        "id": 67,
+        "jsonrpc": "2.0",
+        "method": "qn_getTransactionsByAddress",
+        "params": [{
+          "address": wallet_address,
+          "page": 1,
+          "perPage": 10
+        }]
+    });
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    return fetch(url, requestOptions)
+        .then(response => response.text())
+        .catch(error => console.log('error', error));
+
+  }
+
+  async function wallet_getBalanceInfo(wallet_address: string) {
+    const url = "https://smart-weathered-dust.matic.discover.quiknode.pro/31357e42cb90b2324a86a66b7b3b7db79e0e2808/"
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var raw = JSON.stringify({
+    "id": 67,
+    "jsonrpc": "2.0",
+    "method": "qn_getWalletTokenBalance",
+    "params": [{
+        "wallet": wallet_address
+    }]
+    });
+
+    var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+    return fetch(url, requestOptions)
+        .then(response => response.text())
+        // .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+  }
+
+  async function query_ia(data) {
+    const response = await fetch(
+        "https://ggbot-48h7.onrender.com/api/v1/prediction/cd11e13f-a01a-4f9a-884c-2850abe1ae25",
+        {
+            method: "POST",
+            body: data
+        }
+    );
+    const result = await response.json();
+    return result;
+}
+
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log("VALORES: ",formValues); // Aquí puedes hacer lo que necesites con los valores del formulario
     console.log(formValues.name)
 
-    let jsonInfo = {}
+    const wallet_address = "0x2cA2B328a6394A5f4DfB06cA22B14f2882d49b85"
 
     getGithubInfo(formValues.github)
     .then(res => {
         const githubInfo = res
-        jsonInfo.githubInfo = githubInfo
-        console.log(jsonInfo)
 
-        const quick = new QuickNodeApi(process.env.NEXT_PUBLIC_QUICKNODE_API_KEY)
-        quick.wallet_getTrxInfo().then(res => { 
+        //const quick = new QuickNodeApi(process.env.NEXT_PUBLIC_QUICKNODE_API_KEY)
+        wallet_getTrxInfo(wallet_address).then(res => { 
           const trxInfo = JSON.parse(res)
-          jsonInfo.trxInfo = trxInfo.result.paginatedItems
           
-          quick.wallet_getBalanceInfo().then(res => {
+          wallet_getBalanceInfo(wallet_address).then(res => {
             const balanceInfo = JSON.parse(res)
-            jsonInfo.balanceInfo = balanceInfo.result.result
+
+            const jsonInfo = {
+              githubInfo : githubInfo,
+              trxInfo : trxInfo.result.paginatedItems,
+              balanceInfo : balanceInfo.result.result
+              
+            }
 
             query_ia({"question":jsonInfo }).then((response) => {
               console.log(response);
