@@ -20,6 +20,7 @@
     "@ethersproject/web": "^5.7.1",
     "@heroicons/react": "^2.0.11",
     "@mui/material": "^5.13.6",
+    "@octokit/rest": "^19.0.13",
     "@rainbow-me/rainbowkit": "^0.11.0",
     "@uniswap/sdk": "^3.0.3",
     "daisyui": "^2.31.0",
