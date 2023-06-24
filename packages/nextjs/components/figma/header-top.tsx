@@ -46,13 +46,13 @@ const HeaderTop: NextPage<HeaderTopType> = ({
   }, [yourProfileCursor]);
 
   return (
-    <header className="self-stretch bg-studio-darkmode-allwhite-ffffff h-[93px] flex flex-row py-[22px] px-20 box-border items-center justify-center sticky w-full top-[0] [background:white] text-left text-xl text-studio-darkmode-allwhite-ffffff font-inconsolata lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border">
+    <header className="self-stretch bg-studio-darkmode-allwhite-ffffff h-[93px] flex flex-row py-[22px] px-20 box-border items-center justify-center sticky w-full top-[0] [background:white] text-left text-xl text-studio-darkmode-allwhite-ffffff font-mono lg:pl-10 lg:pr-10 lg:box-border md:pl-6 md:pr-6 md:box-border">
       <div className="w-[1360px] flex flex-row items-center justify-between">
         <button
           className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[207px] h-[33px] overflow-hidden shrink-0"
           onClick={onFickleflightLogoClick}
         >
-          <div className="absolute top-[1.5px] left-[2px] text-11xl font-extrabold font-inconsolata text-darkslateblue text-left inline-block w-[205px] h-8">
+          <div className="absolute top-[1.5px] left-[2px] text-11xl font-extrabold font-mono text-darkslateblue text-left inline-block w-[205px] h-8">
             HackerGrant
           </div>
         </button>
