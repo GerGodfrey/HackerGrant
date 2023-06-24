@@ -7,6 +7,7 @@ import FooterSection from "../components/figma/footer-section";
 
 const PendingResult: NextPage = () => {
   const router = useRouter();
+  //const [sponsorshipAccept, setsponsorshipAccept] = useState(null);
 
   const onFickleflightLogoClick = useCallback(() => {
     router.push("/");
