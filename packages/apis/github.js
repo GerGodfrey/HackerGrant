@@ -3,10 +3,14 @@ import { Octokit } from "@octokit/rest";
 // GITHUB 
 
 async function getGithubInfo(owner){
+  console.log("Obteniendo información de GitHub...")
     let jsonData = {}
+
     const octokit = new Octokit({
-        auth : "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"
+      auth : "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"
     })
+
+    console.log(octokit)
 
     try {
         const response = await octokit.request(`GET /users/${owner}`);
