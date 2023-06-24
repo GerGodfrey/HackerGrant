@@ -1,16 +1,8 @@
 import type { NextPage } from "next";
-import { useCallback } from "react";
 import { useRouter } from "next/router";
-import HeaderTop from "../components/figma/header-top";
-import ParticipantSupportContainer from "../components/figma/participant-support-container";
-import FooterSection from "../components/figma/footer-section";
 
 const Homepage: NextPage = () => {
   const router = useRouter();
-
-  const onFickleflightLogoClick = useCallback(() => {
-    router.push("/");
-  }, [router]);
 
   return (
     <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-center justify-start text-center text-[100px] text-studio-darkmode-allwhite-ffffff font-inconsolata hover:[background:linear-gradient(#fff,_#fff),_#87550a] sm:w-full sm:hover:bg-orange-300">

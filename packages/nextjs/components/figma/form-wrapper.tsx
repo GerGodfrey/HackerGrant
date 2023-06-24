@@ -16,7 +16,7 @@ const FormWrapper: NextPage = () => {
         <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
           Tell us about yourself! This information is for us to get to know you
           better, and to calculate an accurate application score based on your
-          profile. We won't store it or use it for other purposes.
+          profile. We wont store it or use it for other purposes.
         </b>
         <TextField
           className="[border:none] bg-[transparent] self-stretch"
