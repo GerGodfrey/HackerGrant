@@ -31,7 +31,7 @@ const SponsorshipApplicationAsA: NextPage = () => {
         <div className="relative w-[1279px] h-[1919px]">
           <div className="absolute top-[33px] left-[0.5px] leading-[40px] inline-block w-[1279px] h-[1824px]">
             <p className="m-0 font-medium">
-              Hello! I'm Sarah, a passionate
+              Hello! Im Sarah, a passionate
               coder from San Francisco. I have been coding for over six years
               and specialize in front-end development. I love creating intuitive
               and visually appealing user interfaces that enhance the overall
@@ -116,7 +116,7 @@ const SponsorshipApplicationAsA: NextPage = () => {
               My ultimate goal is to become a lead front-end developer and make
               a significant impact by creating user-centric and accessible web
               applications. I aspire to work on projects that positively
-              influence people's lives and contribute to the advancement of
+              influence peoples lives and contribute to the advancement of
               technology.
             </p>
             <p className="m-0 font-medium">&nbsp;</p>

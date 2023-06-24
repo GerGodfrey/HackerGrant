@@ -39,7 +39,7 @@ const PendingResult: NextPage = () => {
             <p className="m-0">&nbsp;</p>
             <p className="m-0">
               We understand the financial challenges that can stop you from
-              showcasing your skills on a larger stage. That's why HackerGrant
+              showcasing your skills on a larger stage. Thats why HackerGrant
               is dedicated to helping you bridge the gap, by connecting you with
               a community of supporters who believe in your talent and
               potential.
