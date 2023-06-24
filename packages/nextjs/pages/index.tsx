@@ -1,10 +1,10 @@
-import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
+//import Link from "next/link";
+//import dynamic from "next/dynamic";
+//import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 import ParticipantSupportContainer from "~~/components/figma/participant-support-container";
 import FooterSection from "~~/components/figma/footer-section";
-import dynamic from "next/dynamic";
 
 const Home: NextPage = () => {
 
