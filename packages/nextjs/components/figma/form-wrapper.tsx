@@ -33,6 +33,7 @@ const FormWrapper: NextPage = () => {
   const [score, setScore ] = useState("");
   const [feedBack1, setfeedBack1] = useState("");
   const [feedBack2, setfeedBack2] = useState("");
+  const [worldConnect, setworldConnect] = useState(false);
  
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -42,14 +43,10 @@ const FormWrapper: NextPage = () => {
     }));
   };
 
-  // const octokit = new Octokit({
-  //   auth : "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"
-  // })
-
   async function getGithubInfo(owner: string){
     console.log("OWNER", owner);
-    const octokit = new Octokit({ auth : "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"});
-
+    const octokit = new Octokit({ auth : process.env.NEXT_PUBLIC_OCTOKIT_API_KEY});
+    console.log("guthub", process.env.NEXT_PUBLIC_OCTOKIT_API_KEY);
     let jsonData = {
       user_name : null,
       followers : null,
@@ -485,9 +482,18 @@ const FormWrapper: NextPage = () => {
                       </div>
                     </div>
                   </Link>
-                  <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
-                      Apply
-                  </button>
+                  { (worldConnect) ? (
+                    <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
+                        Apply
+                    </button>
+                  ) : (
+                    <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
+                        World ID Connect
+                    </button>
+                  )
+
+                  }
+                  
                 </form>
               )
             }
