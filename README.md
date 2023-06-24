@@ -306,3 +306,24 @@ To disable it, **delete `.github` directory**
 We welcome contributions to Scaffold-ETH 2!
 
 Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+
+
+## Pasos para instalarlo en otro proyecto 
+
+- Crear la carpeta apis y copiar los archivos : github, langchain, quicknode, test_generica
+- Instalar 'yarn add @octokit/rest' para librería de Github 
+- en el package.json general, agregar " "type": "module", "
+- EN test_generica tenemos el archivo que debemos de colocar en el front para llamar Langchain,
+    las dos variables son "nombre usuario github" y "wallet de usuario".
+- En hardhat/contracts colocar el contrato inteligente que estemos ocupando. 
+  - Asegurarte de las versiones de Solidity y que los nombres esten en un formato correcto 
+- Dentro de test/ debemos de tener un archivo por SC para hacer pruebas 
+- En hardhat/deploy/00_deploy_your_contract.ts colocamos los contratos a deployar con sus variables 
+  - Corremos la funcion yarn deploy --tags YourContrac o yarn deploy
+  - Los debemos de tener en nextjs/generated/deployedContracts.ts 
+- Corremos el proyecto yarn start 
+- Copiar el tailwindcss 
+
+
+- Instalar 'yarn add @worldcoin/idkit'  dentro de /Waterloo/HackerGrant/packages/nextjs
+
