@@ -22,7 +22,7 @@ const Support: NextPage = () => {
   }, [router]);
 
   return (
-    <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-inconsolata">
+    <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-mono">
       <HeaderTop
         yourProfile="Your profile"
         onFickleflightLogoClick={onFickleflightLogoClick}
