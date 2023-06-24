@@ -7,7 +7,7 @@ async function getGithubInfo(owner){
     let jsonData = {}
 
     const octokit = new Octokit({
-      auth : "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"
+      auth : "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"
     })
 
     console.log(octokit)
