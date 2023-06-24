@@ -45,8 +45,8 @@ const FormWrapper: NextPage = () => {
 
   async function getGithubInfo(owner: string){
     console.log("OWNER", owner);
-    const octokit = new Octokit({ auth :"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"});
-
+    const octokit = new Octokit({ auth : process.env.NEXT_PUBLIC_OCTOKIT_API_KEY});
+    console.log("guthub", process.env.NEXT_PUBLIC_OCTOKIT_API_KEY);
     let jsonData = {
       user_name : null,
       followers : null,
