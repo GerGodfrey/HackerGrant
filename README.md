@@ -34,7 +34,7 @@ Our solution consist in a crowfunding platform to connect hackers and supporters
 ## Platform Components
 <p align="center">
     <br>
-        <img src="images/components.jpg" width="1000"/>
+        <img src="images/components.jpeg" width="1000"/>
     <br>
 <p>
 
