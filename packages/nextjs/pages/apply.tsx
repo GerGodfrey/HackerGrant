@@ -20,12 +20,12 @@ const Apply: NextPage = () => {
 
 
   return (
-    <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-inconsolata">
+    <div className="relative w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-base-content font-mono">
 
       <SponsorshipFormContainer sponsorshipText="Apply for sponsorship" />
       <div className="self-stretch h-[1989px] flex flex-row py-[50px] px-20 box-border items-start justify-center lg:p-10 lg:box-border md:py-5 md:px-6 md:box-border">
         <div className="relative w-[1279px] h-[1916px]">
-          <div className="absolute top-[0px] left-[0.5px] leading-[40px] font-medium inline-block w-[1279px] h-[523px]">
+          <div className="absolute top-[0px] left-[0.5px] leading-[40px] font-medium inline-block w-[1279px] h-[523px] text-base-300">
             <p className="m-0">
               Calling all passionate coders and aspiring competitors,
             </p>

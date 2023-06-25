@@ -260,7 +260,7 @@ const FormWrapper: NextPage = () => {
                 </div>
               ) : ( 
                 <form className="w-[714px] h-[1472px] flex flex-col items-start justify-start gap-[10px]" onSubmit={handleSubmit}>
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[100px] shrink-0">
                     Tell us about yourself! This information is for us to get to know you
                     better, and to calculate an accurate application score based on your
                     profile. We wont store it or use it for other purposes.
@@ -291,7 +291,7 @@ const FormWrapper: NextPage = () => {
                     value={formValues.country}
                     onChange={handleChange}
                   />
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[48.5px] shrink-0">
                     Social media
                   </b>
                   <TextField
@@ -307,7 +307,7 @@ const FormWrapper: NextPage = () => {
                     value={formValues.twitter}
                     onChange={handleChange}
                   />
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[48.5px] shrink-0">
                     Track record information
                   </b>
                   <TextField
@@ -366,7 +366,7 @@ const FormWrapper: NextPage = () => {
                     value={formValues.highlight}
                     onChange={handleChange}
                   />
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[48.5px] shrink-0">
                     Application details
                   </b>
                   {/* TODO extraer info del FormControl */}
@@ -379,22 +379,22 @@ const FormWrapper: NextPage = () => {
                       size="medium"
                       label="Which ETHGlobal event are you interested in attending?"
                     >
-                      <MenuItem value="Pragma Paris (July 20">
-                        Pragma Paris (July 20
+                      <MenuItem value="Pragma Paris (July 20, 2023)">
+                        Pragma Paris (July 20, 2023)
                       </MenuItem>
-                      <MenuItem value="2023)">2023)</MenuItem>
-                      <MenuItem value="ETHGlobal Paris (July 21-23">
-                        ETHGlobal Paris (July 21-23
+                      
+                      <MenuItem value="ETHGlobal Paris (July 21-23, 2023)">
+                        ETHGlobal Paris (July 21-23, 2023)
                       </MenuItem>
-                      <MenuItem value="2023)">2023)</MenuItem>
-                      <MenuItem value="ETHGlobal New York (Sep 22-24">
-                        ETHGlobal New York (Sep 22-24
+                      
+                      <MenuItem value="ETHGlobal New York (Sep 22-24, 2023)">
+                        ETHGlobal New York (Sep 22-24, 2023)
                       </MenuItem>
-                      <MenuItem value="2023)">2023)</MenuItem>
-                      <MenuItem value="ETHGlobal Istanbul (Nov 17-19">
-                        ETHGlobal Istanbul (Nov 17-19
+                      
+                      <MenuItem value="ETHGlobal Istanbul (Nov 17-19, 2023)">
+                        ETHGlobal Istanbul (Nov 17-19, 2023)
                       </MenuItem>
-                      <MenuItem value="2023)">2023)</MenuItem>
+                      
                     </Select>
                     <FormHelperText />
                   </FormControl>
@@ -427,7 +427,7 @@ const FormWrapper: NextPage = () => {
                     value={formValues.use}
                     onChange={handleChange}
                   />
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[48.5px] shrink-0">
                     <span className="[line-break:anywhere] w-full">
                       <p className="m-0">
                         I attest that the information presented is accurate.
@@ -446,12 +446,12 @@ const FormWrapper: NextPage = () => {
                         <div className="flex flex-col items-start justify-start">
                           <div className="rounded-2xl bg-grey-grey-300 flex flex-row p-1 items-center justify-start">
                             <div className="rounded-45xl bg-grey-grey-400 w-6 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
-                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-input-text text-grey-grey-700 text-center flex items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-input-text text-base-300 text-center flex items-center justify-center">
                                 F
                               </div>
                             </div>
                             <div className="flex flex-col py-[3px] px-1.5 items-start justify-start">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-input-text text-text-primary text-left">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-input-text text-base-300 text-left">
                                 Chip
                               </div>
                             </div>
@@ -464,12 +464,12 @@ const FormWrapper: NextPage = () => {
                         <div className="flex flex-col items-start justify-start">
                           <div className="rounded-2xl bg-grey-grey-300 flex flex-row p-1 items-center justify-start">
                             <div className="rounded-45xl bg-grey-grey-400 w-6 h-6 overflow-hidden shrink-0 hidden flex-row items-center justify-center">
-                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-input-text text-grey-grey-700 text-center flex items-center justify-center">
+                              <div className="self-stretch flex-1 relative text-xs tracking-[0.4px] leading-[166%] font-components-input-text text-base-300 text-center flex items-center justify-center">
                                 F
                               </div>
                             </div>
                             <div className="flex flex-col py-[3px] px-1.5 items-start justify-start">
-                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-input-text text-text-primary text-left">
+                              <div className="relative text-smi tracking-[0.16px] leading-[18px] font-components-input-text text-base-300 text-left">
                                 Chip
                               </div>
                             </div>
@@ -480,7 +480,7 @@ const FormWrapper: NextPage = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex-1 relative text-base tracking-[0.15px] leading-[24px] font-components-input-text text-text-secondary text-left">
+                      <div className="flex-1 relative text-base tracking-[0.15px] leading-[24px] font-components-input-text text-base-300 text-left">
                         Use this space to agree with the statement above and proceed with
                         Proof of Humanity.
                       </div>
@@ -511,7 +511,7 @@ const FormWrapper: NextPage = () => {
                     //     World ID Connect
                     // </button>
                     <h3>
-                      First, acces with World ID
+                      First, access World ID
                     </h3>
                   )}
                 </form>
