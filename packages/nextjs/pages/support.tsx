@@ -24,19 +24,18 @@ const Support: NextPage = () => {
   }, [router]);
 
   const ITEMS = useMemo(() => ([
-    { name_title: 'Item 1', imageUrl: '/../noun-example.svg', progress: 20 },
-    { name_title: 'Item 2', imageUrl: '/../noun-example.svg', progress: 50 },
-    { name_title: 'Item 3', imageUrl: '/../noun-example.svg', progress: 80 },
+    { name_title: 'Vitalik.eth', imageUrl: '/../assets/noun_1.svg', progress: 20 },
+    { name_title: 'Kitalik.eth', imageUrl: '/../assets/noun_2.svg', progress: 80 },
+    { name_title: 'Sitalik.eth', imageUrl: '/../assets/noun_3.svg', progress: 30 },
+    { name_title: 'Mitalik.eth', imageUrl: '/../assets/noun_4.svg', progress: 40 },
+    { name_title: 'Pitalik.eth', imageUrl: '/../assets/noun_5.svg', progress: 20 },
+    { name_title: 'Fitalik.eth', imageUrl: '/../assets/noun_6.svg', progress: 80 },
   ]), []);
   return (
     <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-mono">
-      <HeaderTop
-        yourProfile="Your profile"
-        onFickleflightLogoClick={onFickleflightLogoClick}
-        onYourProfileTextClick={onYourProfileTextClick}
-      />
-      <Carousel items={ITEMS} />
+      
       <SponsorshipFormContainer sponsorshipText="Support participants" />
+      <Carousel items={ITEMS} />
       <div className="self-stretch h-[1692px] flex flex-col py-[50px] px-20 box-border items-center justify-start gap-[50px] lg:p-10 lg:box-border md:py-5 md:px-6 md:box-border">
         <div className="relative w-[1279px] h-[440px] overflow-hidden shrink-0">
           <div className="absolute top-[0px] left-[0.5px] leading-[40px] font-medium inline-block w-[1279px] h-[407px]">
