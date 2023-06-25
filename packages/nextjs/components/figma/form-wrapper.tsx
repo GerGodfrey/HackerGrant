@@ -262,7 +262,7 @@ const FormWrapper: NextPage = () => {
           <div className="col-span-1">
             {
               (requestSent) ? (
-                <div>
+                <div className="text-base-300">
                   <h2>
                     Thanks for applying!
                   </h2>
