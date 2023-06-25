@@ -23,6 +23,13 @@ At the same time, for those who support hackers, would allow them to:
 
 ## Proposed Solution
 
+Our solution consist in a crowfunding platform to connect hackers and supporters 
+
+1. The hacker sign up in the platform and provide some basic info, his github link and his public address, the system assess the hacker using a large language model, if the hacker is approved his profile is published in the platform
+2. Supporters sign up in the platform and check the published hackers profiles and select those who want to support, they transfer the resources from their wallets to a escrow account created with a smart contract and hold the resources until the hacker's campaign is finished
+3. When the requested amount is reached, the platform transfers the balance to the hacker's wallet and he can use the resources to cover his trip's expenses  
+
+
 ## Platform Components
 <p align="center">
     <br>
@@ -32,13 +39,14 @@ At the same time, for those who support hackers, would allow them to:
 
 
 The Platform consists of the following main components:
-1.	**C1:** This displays the main concerts and provides various search options to find other available events.
-2.	**C2:** To ensure compliance with the established requirements, users will be required to log in to Spotify to verify their affinity with the artist.
-3.	**C3:** Once authenticated, users can choose their preferred show and select a specific date on which the artist will perform.
-4.	**C4:** After choosing the date, users can select the preferred zone and seat within the event venue.
-5.	**C5:** Once the selections are complete, users will proceed to make the corresponding payment to acquire the chosen tickets.
-Additionally, from the home screen, users who have purchased tickets in the pre-sale will be able to access additional features such as transportation, lockers, and mobile device chargers utilizing the Internet of Things (IoT).
-6. **C6** This bot provides in-venue, real world feedback and functionalities. As of now, we can control a local plug, used as reference of having charging spots available for premium users in the venue, and another remote plug used to refer to the ability to use a locker for in-venue storage. This implements the substrate/robonomics network and is one of our most valuable components.
+1.	**Scaffold.eth** This displays the main concerts and provides various search options to find other available events.
+2.	**NEXT.js** To ensure compliance with the established requirements, users will be required to log in to Spotify to verify their affinity 
+3.	**Nouns:** Once authenticated, users can choose their preferred show and select a specific date on which the artist will perform.
+4.	**Quicknode:** After choosing the date, users can select the preferred zone and seat within the event venue.
+5.	**Langchain** Once the selections are complete, users will proceed to make the corresponding payment to acquire the chosen tickets.
+6. **WordID** This bot provides in-venue, real world feedback and functionalities. As of now, we can control a local plug, used as 
+7. **Airstack** Th
+8. **Polygon** Th
 
 ## Our Source
 1. Web Page: https://hackergrant-gergodfrey.vercel.app/
