@@ -24,7 +24,7 @@ const Support: NextPage = () => {
   }, [router]);
 
   const ITEMS = useMemo(() => ([
-    { name_title: 'Sarah.eth', imageUrl: '/../assets/noun_1.svg', progress: 20 },
+    { name_title: 'Sarah.eth', imageUrl: '/../assets/noun_1.svg', progress: 20 , link:'./sarah'},
     { name_title: 'Vitalik.eth', imageUrl: '/../assets/noun_2.svg', progress: 80 },
     { name_title: 'Sitalik.eth', imageUrl: '/../assets/noun_3.svg', progress: 30 },
     { name_title: 'Mitalik.eth', imageUrl: '/../assets/noun_4.svg', progress: 40 },
@@ -64,29 +64,6 @@ const Support: NextPage = () => {
               future of coding.
             </p>
           </div>
-        </div>
-        <div className="w-[1288px] h-[1152px] flex flex-row items-start justify-start">
-          <TechExpoContainer
-            locationText="Front-end Developer from San Francisco, USA"
-            developerName="Sarah Johnson"
-            eventName="TechExpo Hackathon 2023"
-            onMoreDetailsButtonClick={onMoreDetailsButtonClick}
-          />
-          <TechExpoContainer
-            locationText="Full-stack Developer from London, UK"
-            developerName="Michael Chen"
-            eventName="CodeFest Competition 2023"
-          />
-          <TechExpoContainer
-            locationText="UX/UI Designer from Barcelona, Spain"
-            developerName="Ana Rodriguez"
-            eventName="HackXtreme Hackathon 2023"
-          />
-          <TechExpoContainer
-            locationText="Data Scientist from Sydney, Australia"
-            developerName="David Nguyen"
-            eventName="StartUpHacks Challenge 2023"
-          />
         </div>
       </div>
       <FooterSection />
