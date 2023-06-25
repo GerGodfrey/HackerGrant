@@ -1,3 +1,4 @@
+import { init, useQuery } from "@airstack/airstack-react";
 import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
@@ -5,6 +6,9 @@ import HeaderTop from "../components/figma/header-top";
 import SponsorshipFormContainer from "../components/figma/sponsorship-form-container";
 import DonateForm from "../components/figma/donate-form";
 import FooterSection from "../components/figma/footer-section";
+import { StatusIcon } from "~~/components/StatusIcon";
+
+init("ef3d1cdeafb642d3a8d6a44664ce566c");
 
 const SponsorshipApplicationAsA: NextPage = () => {
   const router = useRouter();
@@ -16,10 +20,35 @@ const SponsorshipApplicationAsA: NextPage = () => {
   const onConnectWalletButtonClick = useCallback(() => {
     router.push("/");
   }, [router]);
+  const query = `query GetAllTransfersToOrFromScbuergel($eventId: String, $owner: Identity) {
+    Poaps(
+      input: {filter: {eventId: {_eq: $eventId}, owner: {_eq: $owner}}, blockchain: ALL}
+    ) {
+      Poap {
+        eventId
+        owner {
+          identity
+          addresses
+        }
+      }
+    }
+  }`; // Your GraphQL query
+  const variables = {
+    "eventId": "103093",
+    "owner": "tokenstaker.eth"
+  }; // Your GraphQL variables
+
+  const { data, loading, error } = useQuery(query, variables);
+
+  let isEventIdInteger = false;
+  if (data && data.Poaps && data.Poaps.Poap && data.Poaps.Poap[0]) {
+    isEventIdInteger = Number.isInteger(parseInt(data.Poaps.Poap[0].eventId));
+  }
 
   return (
     <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-base-content font-mono">
       <SponsorshipFormContainer sponsorshipText="Sponsorship application" />
+      <StatusIcon status={isEventIdInteger} />
       <div className="self-stretch h-[2246px] flex flex-col py-[50px] px-20 box-border items-start justify-start lg:p-10 lg:box-border md:py-5 md:px-6 md:box-border text-base-300 font-mono">
         <div className="relative w-[1279px] h-[1919px]">
           <div className="absolute top-[33px] left-[0.5px] leading-[40px] inline-block w-[1279px] h-[1824px] font-mono">
