@@ -24,12 +24,12 @@ const Support: NextPage = () => {
   }, [router]);
 
   const ITEMS = useMemo(() => ([
-    { name_title: 'Vitalik.eth', imageUrl: '/../assets/noun_1.svg', progress: 20 },
-    { name_title: 'Kitalik.eth', imageUrl: '/../assets/noun_2.svg', progress: 80 },
+    { name_title: 'Sarah.eth', imageUrl: '/../assets/noun_1.svg', progress: 20 },
+    { name_title: 'Vitalik.eth', imageUrl: '/../assets/noun_2.svg', progress: 80 },
     { name_title: 'Sitalik.eth', imageUrl: '/../assets/noun_3.svg', progress: 30 },
     { name_title: 'Mitalik.eth', imageUrl: '/../assets/noun_4.svg', progress: 40 },
     { name_title: 'Pitalik.eth', imageUrl: '/../assets/noun_5.svg', progress: 20 },
-    { name_title: 'Fitalik.eth', imageUrl: '/../assets/noun_6.svg', progress: 80 },
+
   ]), []);
   return (
     <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-mono">
