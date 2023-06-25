@@ -3492,6 +3492,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
     ethers: ^5.0.0
+    firebase: ^9.23.0
     next: ^13.1.6
     nextjs-progressbar: ^0.0.16
     postcss: ^8.4.16
@@ -14647,7 +14648,6 @@ __metadata:
   resolution: "se-2@workspace:."
   dependencies:
     "@octokit/rest": ^19.0.13
-    firebase: ^9.23.0
     husky: ^8.0.1
     lint-staged: ^13.0.3
   languageName: unknown
