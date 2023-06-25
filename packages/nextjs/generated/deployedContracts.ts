@@ -756,6 +756,696 @@ const contracts = {
             },
           ],
         },
+        onlyDonate2: {
+          address: "0x5d8DD6F9B979f758d3Cf6e8bBA191482470e4207",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "new_goal",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "new_timeout",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "payable",
+              type: "constructor",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Cashed",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: false,
+                  internalType: "address",
+                  name: "good_soul",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "uint256",
+                  name: "donation",
+                  type: "uint256",
+                },
+              ],
+              name: "Donated",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Reached",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Refunded",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "StartFunding",
+              type: "event",
+            },
+            {
+              inputs: [],
+              name: "donate",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "donations",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "finished_contract",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "goal",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              name: "good_souls",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "greeting",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "is_contract_finished_questionmark",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "finito",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "solicitant",
+              outputs: [
+                {
+                  internalType: "address payable",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "bool",
+                  name: "cashing",
+                  type: "bool",
+                },
+              ],
+              name: "stop",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "time_left",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "time",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "timeout",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "total_raised",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              stateMutability: "payable",
+              type: "receive",
+            },
+          ],
+        },
+        onlyDonate3: {
+          address: "0x06c0e9748D4C9F2A8dC6D53A74E1e9511e76dDEd",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "new_goal",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "new_timeout",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "payable",
+              type: "constructor",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Cashed",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: false,
+                  internalType: "address",
+                  name: "good_soul",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "uint256",
+                  name: "donation",
+                  type: "uint256",
+                },
+              ],
+              name: "Donated",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Reached",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Refunded",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "StartFunding",
+              type: "event",
+            },
+            {
+              inputs: [],
+              name: "donate",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "donations",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "finished_contract",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "goal",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              name: "good_souls",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "greeting",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "is_contract_finished_questionmark",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "finito",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "solicitant",
+              outputs: [
+                {
+                  internalType: "address payable",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "bool",
+                  name: "cashing",
+                  type: "bool",
+                },
+              ],
+              name: "stop",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "time_left",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "time",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "timeout",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "total_raised",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              stateMutability: "payable",
+              type: "receive",
+            },
+          ],
+        },
+        onlyDonate4: {
+          address: "0xD4812eAE8C429274FBe56F7812CcB3963c96A42A",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "new_goal",
+                  type: "uint256",
+                },
+                {
+                  internalType: "uint256",
+                  name: "new_timeout",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "payable",
+              type: "constructor",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Cashed",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [
+                {
+                  indexed: false,
+                  internalType: "address",
+                  name: "good_soul",
+                  type: "address",
+                },
+                {
+                  indexed: false,
+                  internalType: "uint256",
+                  name: "donation",
+                  type: "uint256",
+                },
+              ],
+              name: "Donated",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Reached",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "Refunded",
+              type: "event",
+            },
+            {
+              anonymous: false,
+              inputs: [],
+              name: "StartFunding",
+              type: "event",
+            },
+            {
+              inputs: [],
+              name: "donate",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              name: "donations",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "finished_contract",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "goal",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              name: "good_souls",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "greeting",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "is_contract_finished_questionmark",
+              outputs: [
+                {
+                  internalType: "bool",
+                  name: "finito",
+                  type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "solicitant",
+              outputs: [
+                {
+                  internalType: "address payable",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "bool",
+                  name: "cashing",
+                  type: "bool",
+                },
+              ],
+              name: "stop",
+              outputs: [],
+              stateMutability: "payable",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "time_left",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "time",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "timeout",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "total_raised",
+              outputs: [
+                {
+                  internalType: "uint256",
+                  name: "",
+                  type: "uint256",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              stateMutability: "payable",
+              type: "receive",
+            },
+          ],
+        },
       },
     },
   ],

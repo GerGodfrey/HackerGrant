@@ -64,7 +64,7 @@ export const DonateForm: React.FC = () => {
   // };
 
   const { writeAsync, isLoading, isMining } = useScaffoldContractWrite({
-    contractName: "onlyDonate",
+    contractName: "onlyDonate3",
     functionName: "donate",
     // For payable functions, expressed in ETH
     value: String(donationAmount),
