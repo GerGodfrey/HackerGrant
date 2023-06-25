@@ -3,6 +3,8 @@ import { useState } from "react";
 import dynamic from 'next/dynamic'
 import { useRouter } from "next/router";
 import { useAccount, useNetwork } from "wagmi";
+import { firebase } from "./api/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 import {
   TextField,
@@ -183,9 +185,21 @@ const FormWrapper: NextPage = () => {
 
   //OTHERS 
 
+  async function firebaseData (result){
+    const ref = collection(firebase, "registro");
+    try {
+      const docRef = await addDoc(ref, {
+        result, address
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
   const onSuccess = (result: ISuccessResult) => {
     //TODO : guardarlo en firebase o algo y matchear las solicitudes
     console.log("resultadoooooooo",result);
+    firebaseData(result);
     setworldConnect(true)
   }
 
@@ -252,6 +266,7 @@ const FormWrapper: NextPage = () => {
 		}).then(async (res: Response) => {
 			if (res.status == 200) {
 				console.log("Successfully verified credential.")
+
 			} else {
 				throw new Error("Error: " + (await res.json()).code) ?? "Unknown error.";
 			}
