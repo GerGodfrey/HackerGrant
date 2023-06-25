@@ -233,7 +233,7 @@ const FormWrapper: NextPage = () => {
 
   return (
     <div>
-      <div className="absolute top-[365px] left-[-0.5px] w-[1279px] h-[1551px] overflow-hidden flex flex-row py-[79px] px-0 box-border items-start justify-start">
+      <div className="absolute top-[365px] left-[-0.5px] w-[1279px] h-[1551px] overflow-hidden flex flex-row py-[79px] px-0 box-border items-start justify-start text-base-100">
         <div className="grid grid-cols-1 gap-4">
           <div className="col-span-1">
             {
@@ -259,8 +259,8 @@ const FormWrapper: NextPage = () => {
                   </button>
                 </div>
               ) : ( 
-                <form className="w-[714px] h-[1472px] flex flex-col items-start justify-start gap-[10px]" onSubmit={handleSubmit}>
-                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-300 text-left items-center w-[714px] h-[100px] shrink-0">
+                <form className="w-[714px] h-[1472px] flex flex-col items-start justify-start gap-[10px] text-base-300" onSubmit={handleSubmit}>
+                  <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-base-100 text-left items-center w-[714px] h-[100px] shrink-0">
                     Tell us about yourself! This information is for us to get to know you
                     better, and to calculate an accurate application score based on your
                     profile. We wont store it or use it for other purposes.
@@ -371,7 +371,7 @@ const FormWrapper: NextPage = () => {
                   </b>
                   {/* TODO extraer info del FormControl */}
                   <FormControl className="self-stretch" variant="standard">
-                    <InputLabel color="primary">
+                    <InputLabel color="secondary">
                       Which ETHGlobal event are you interested in attending?
                     </InputLabel>
                     <Select
@@ -480,10 +480,6 @@ const FormWrapper: NextPage = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex-1 relative text-base tracking-[0.15px] leading-[24px] font-components-input-text text-base-300 text-left">
-                        Use this space to agree with the statement above and proceed with
-                        Proof of Humanity.
-                      </div>
                       <div className="relative w-7 h-7 hidden">
                         <div className="absolute top-[0px] left-[0px] flex flex-col items-center justify-start">
                           <div className="rounded-29xl flex flex-row p-1 items-center justify-start">
@@ -494,12 +490,7 @@ const FormWrapper: NextPage = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flex-row items-start justify-start">
-                        <img
-                          className="relative w-6 h-6 overflow-hidden shrink-0"
-                          alt=""
-                        />
-                      </div>
+
                     </div>
                   </Link>
                   { (worldConnect) ? (
@@ -510,9 +501,9 @@ const FormWrapper: NextPage = () => {
                     // <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
                     //     World ID Connect
                     // </button>
-                    <h3>
-                      First, access World ID
-                    </h3>
+                    <p>
+                      Proceed for Proof of Humanity
+                    </p>
                   )}
                 </form>
               )}
@@ -520,7 +511,7 @@ const FormWrapper: NextPage = () => {
         </div>
         <div className="grid grid-cols-1 gap-4">
           <div className="col-span-1">
-            <div  style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
+            <div  style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300vh" }}>
               <IDKitWidget
                 //action="my_action"
                 //signal="my_signal"
@@ -531,7 +522,7 @@ const FormWrapper: NextPage = () => {
                 // credential_types=["orb","phone"]
                 // walletConnectProjectId="get_this_from_walletconnect_portal"
               >
-                {({ open }) => <button className= "btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center" onClick={open}>World ID Connecte</button>}
+                {({ open }) => <button className= "btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-center justify-center text-base-300" onClick={open}>World ID Connect</button>}
               </IDKitWidget>
             </div>
           </div>

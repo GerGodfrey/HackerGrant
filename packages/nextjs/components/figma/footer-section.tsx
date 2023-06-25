@@ -7,14 +7,14 @@ type FooterSectionType = {
 const FooterSection: NextPage<FooterSectionType> = ({ productIds }) => {
   return (
     <div className="self-stretch flex flex-col items-start justify-start">
-      <footer className="self-stretch [background:linear-gradient(91.74deg,_#73118b,_#73118b)] flex flex-row py-[33px] px-[84px] items-start justify-start gap-[44px] text-left text-lg text-studio-darkmode-allwhite-ffffff font-inter lg:p-10 lg:box-border md:flex-col md:pt-10 md:px-6 md:pb-[30px] md:box-border sm:py-[30px] sm:px-6 sm:box-border">
-        <div className="flex-1 flex flex-col items-start justify-start gap-[14px] mb-[40px!important] md:flex-[unset] md:self-stretch">
+      <footer className="self-stretch [background:linear-gradient(91.74deg,_#73118b,_#73118b)] flex flex-row py-[33px] px-[84px] items-start justify-start gap-[44px] text-left text-lg text-studio-darkmode-allwhite-ffffff font-mono lg:p-10 lg:box-border md:flex-col md:pt-10 md:px-6 md:pb-[30px] md:box-border sm:py-[30px] sm:px-6 sm:box-border">
+        <div className="flex-1 flex flex-col items-start justify-start gap-[14px] mb-[40px!important] md:flex-[unset] md:self-stretch font-mono">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[207px] h-[33px] overflow-hidden shrink-0">
-            <div className="absolute top-[1px] left-[0px] text-11xl font-extrabold font-mono text-studio-darkmode-allwhite-ffffff text-left inline-block w-[205px] h-8">
+            <div className="absolute top-[1px] left-[0px] text-11xl font-extrabold font-mono text-left inline-block w-[205px] h-8">
               HackerGrant
             </div>
           </button>
-          <div className="self-stretch relative leading-[27px]">
+          <div className="self-stretch relative leading-[27px] font-mono">
             <p className="m-0">
               Support aspiring hackers by making donations towards their
               participation fees.
@@ -29,13 +29,13 @@ const FooterSection: NextPage<FooterSectionType> = ({ productIds }) => {
           <img
             className="relative w-[130px] h-[30px]"
             alt=""
-            src={productIds}
+            src="/social-icons.svg"
           />
         </div>
         <img
           className="relative w-px h-[156.87px] md:hidden"
           alt=""
-          src="/line-41.svg"
+          src="/social-icons.svg"
         />
         <div className="w-[405px] flex flex-row items-start justify-between text-base sm:flex-col">
           <div className="relative w-[197.33px] h-[159.76px] sm:mb-[40px!important] font-mono">
