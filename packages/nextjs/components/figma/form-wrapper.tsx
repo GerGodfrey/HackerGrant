@@ -2,6 +2,10 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import dynamic from 'next/dynamic'
 import { useRouter } from "next/router";
+import { useAccount, useNetwork } from "wagmi";
+import { firebase } from "./api/firebase";
+import { collection, addDoc } from "firebase/firestore";
+
 import {
   TextField,
   FormControl,
@@ -20,6 +24,7 @@ const IDKitWidget = dynamic(() => import('@worldcoin/idkit')
 
 
 const FormWrapper: NextPage = () => {
+  const { address } = useAccount();
 
   //TODO mandas importar langchain
 
@@ -180,9 +185,21 @@ const FormWrapper: NextPage = () => {
 
   //OTHERS 
 
+  async function firebaseData (result){
+    const ref = collection(firebase, "registro");
+    try {
+      const docRef = await addDoc(ref, {
+        result, address
+      });
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  }
   const onSuccess = (result: ISuccessResult) => {
     //TODO : guardarlo en firebase o algo y matchear las solicitudes
     console.log("resultadoooooooo",result);
+    firebaseData(result);
     setworldConnect(true)
   }
 
@@ -192,7 +209,8 @@ const FormWrapper: NextPage = () => {
     console.log("VALORES: ",formValues); // Aquí puedes hacer lo que necesites con los valores del formulario
     console.log(formValues.name)
 
-    const wallet_address = "0x2cA2B328a6394A5f4DfB06cA22B14f2882d49b85"
+    const wallet_address = address  // Obteniendo la wallet 
+    console.log("WALLET CONECTADA: ",wallet_address)
 
     getGithubInfo(formValues.github)
     .then(res => {
@@ -248,6 +266,7 @@ const FormWrapper: NextPage = () => {
 		}).then(async (res: Response) => {
 			if (res.status == 200) {
 				console.log("Successfully verified credential.")
+
 			} else {
 				throw new Error("Error: " + (await res.json()).code) ?? "Unknown error.";
 			}

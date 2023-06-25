@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { firebase } from "../../components/figma/api/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 export type Reply = {
 	code: string
@@ -23,9 +25,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Reply>
 	}).then(async (verifyRes) => {
 		const wldResponse = await verifyRes.json()
 		if (verifyRes.status == 200) {
-			res.status(200).send({ code: wldResponse.code });
-			console.log("aquiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
+						
+			console.log("acaaaaaaaaaaaaa")
+			const ref = collection(firebase, "registro");
+			try {
+				const docRef = await addDoc(ref, {
+					res
+				});
+				console.log("Document written with ID: ", docRef.id);
+			} catch (e) {
+				console.error("Error adding document: ", e);
+			}
 			// This is where you should perform backend actions based on the verified credential, such as setting a user as "verified" in a database
+			res.status(200).send({ code: wldResponse.code });
 
 		} else {
 			res.status(400).send({ code: wldResponse.code });
