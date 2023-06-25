@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
+import dynamic from 'next/dynamic'
 import { useRouter } from "next/router";
 import {
   TextField,
@@ -11,6 +12,11 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { Octokit } from "@octokit/rest";
+
+
+
+const IDKitWidget = dynamic(() => import('@worldcoin/idkit')
+.then(mod => mod.IDKitWidget), { ssr: false })
 
 
 const FormWrapper: NextPage = () => {
@@ -42,6 +48,8 @@ const FormWrapper: NextPage = () => {
       [name]: value
     }));
   };
+
+  //GITHUB API
 
   async function getGithubInfo(owner: string){
     console.log("OWNER", owner);
@@ -100,6 +108,8 @@ const FormWrapper: NextPage = () => {
       }
   }
 
+  //QUICK NODE 
+
   async function wallet_getTrxInfo(wallet_address: string) {
     const url = "https://smart-weathered-dust.matic.discover.quiknode.pro/31357e42cb90b2324a86a66b7b3b7db79e0e2808/"
     var myHeaders = new Headers();
@@ -154,7 +164,9 @@ const FormWrapper: NextPage = () => {
         .catch(error => console.log('error', error));
   }
 
-  async function query_ia(data) {
+  //LANGCHAIN API
+
+  async function query_ia(data: { question: { githubInfo: { user_name: null; followers: null; following: null; public_repos: null; location: null; updated_at: null; balanceInfo: null; programing_languages: string; code_size: number; }; trxInfo: any; balanceInfo: any; }; }) {
     const response = await fetch(
         "https://ggbot-48h7.onrender.com/api/v1/prediction/cd11e13f-a01a-4f9a-884c-2850abe1ae25",
         {
@@ -165,6 +177,14 @@ const FormWrapper: NextPage = () => {
     const result = await response.json();
     return result;
 }
+
+  //OTHERS 
+
+  function onSuccess(result: any){
+    //TODO : guardarlo en firebase o algo y matchear las solicitudes
+    console.log("resultadoooooooo",result);
+    setworldConnect(true)
+  }
 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -238,7 +258,7 @@ const FormWrapper: NextPage = () => {
                     Deploy
                   </button>
                 </div>
-              ) : (
+              ) : ( 
                 <form className="w-[714px] h-[1472px] flex flex-col items-start justify-start gap-[10px]" onSubmit={handleSubmit}>
                   <b className="relative text-base tracking-[0.15px] leading-[24px] flex font-components-input-text text-text-secondary text-left items-center w-[714px] h-[48.5px] shrink-0">
                     Tell us about yourself! This information is for us to get to know you
@@ -487,19 +507,38 @@ const FormWrapper: NextPage = () => {
                         Apply
                     </button>
                   ) : (
-                    <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
-                        World ID Connect
-                    </button>
-                  )
-
-                  }
-                  
+                    // <button className="btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center">
+                    //     World ID Connect
+                    // </button>
+                    <h3>
+                      First, acces with World ID
+                    </h3>
+                  )}
                 </form>
-              )
-            }
+              )}
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          <div className="col-span-1">
+            <div  style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
+              <IDKitWidget
+                //action="my_action"
+                //signal="my_signal"
+                onSuccess={(result: any) => onSuccess(result)}
+                //handleVerify={handleProof}
+                app_id="app_fc30e6754b7a0020c89f355d629c169b"
+                //onSuccess={result => console.log(result)}
+                // credential_types=["orb","phone"]
+                // walletConnectProjectId="get_this_from_walletconnect_portal"
+              >
+                {({ open }) => <button className= "btn [background:linear-gradient(73.12deg,_#641476,_#9d4561)] flex flex-col py-0 px-[59px] box-border items-end justify-center" onClick={open}>World ID Connecte</button>}
+              </IDKitWidget>
+            </div>
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };
