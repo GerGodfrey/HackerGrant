@@ -6,9 +6,18 @@
 <p>
 
 ## Description
-This repository contains the source code and related resources for The Hacker Grant, a Web3 crowdfunding platform designed to address the issue of that many hackers and aspiring developers cannot afford to attend global hackathons.
+This repository contains the source code and related resources for The Hacker Grant, a Web3 crowdfunding platform designed support talented hackers. 
 ## Problem
-While the Ethereum developer community is expanding and thriving, 
+While the Ethereum developer community is expanding and thriving, many hackers and aspiring developers cannot afford to attend global hackathons. 
+
+Resolving this lack of resources, would allow hackers:
+ 
+- To networking in person
+- To learn about the latest advancements
+- Get valuable insights and practical experience
+
+
+
 
 ## Proposed Solution
 
