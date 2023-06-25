@@ -12,6 +12,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@airstack/airstack-react@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "@airstack/airstack-react@npm:0.3.3"
+  dependencies:
+    graphql: 16.6.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 69397cabc18a13c638b634bb354d58587575da02bdc99cb958ce282e7a0a07c46e66c2f674be881857c242234efb14ffa7617bc67f2c10f4b3cded0461e0e02b
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0":
   version: 7.22.5
   resolution: "@babel/code-frame@npm:7.22.5"
@@ -2836,6 +2848,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@se-2/nextjs@workspace:packages/nextjs"
   dependencies:
+    "@airstack/airstack-react": ^0.3.3
     "@emotion/react": ^11.11.1
     "@emotion/styled": ^11.11.0
     "@ethersproject/networks": ^5.7.1
@@ -9499,6 +9512,13 @@ __metadata:
   version: 1.0.4
   resolution: "grapheme-splitter@npm:1.0.4"
   checksum: 0c22ec54dee1b05cd480f78cf14f732cb5b108edc073572c4ec205df4cd63f30f8db8025afc5debc8835a8ddeacf648a1c7992fe3dcd6ad38f9a476d84906620
+  languageName: node
+  linkType: hard
+
+"graphql@npm:16.6.0":
+  version: 16.6.0
+  resolution: "graphql@npm:16.6.0"
+  checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
   languageName: node
   linkType: hard
 
