@@ -31,7 +31,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
-  await deploy("onlyDonate", {
+  await deploy("onlyDonate4", {
     from: deployer,
     // Contract constructor arguments
     args: [10,10],
@@ -73,3 +73,4 @@ export default deployYourContract;
 deployYourContract.tags = ["onlyDonate"];
 deployYourContract.tags = ["onlyDonate2"];
 deployYourContract.tags = ["onlyDonate3"];
+deployYourContract.tags = ["onlyDonate4"];

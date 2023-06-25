@@ -3,7 +3,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 import "hardhat/console.sol";
 
-contract onlyDonate {
+contract onlyDonate3 {
     address payable public solicitant;  // Adress of the solicitant.
     address [] public good_souls;       // Array of investors.
     mapping(address => uint) public donations; // Amount invested by adress.
