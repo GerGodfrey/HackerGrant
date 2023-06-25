@@ -3,7 +3,7 @@ import { Card } from './Card'
 
 export const Carousel: React.FC<CarouselProps> = ({ items }) => {
     return (
-        <div className="overflow-x-scroll whitespace-nowrap py-4 px-2 flex">
+        <div className="overflow-hidden py-4 px-2 flex">
           {items.map((item, index) => (
             <Card
               item={item}

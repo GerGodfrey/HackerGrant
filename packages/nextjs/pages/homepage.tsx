@@ -12,7 +12,7 @@ const Homepage: NextPage = () => {
             <div className="self-stretch relative leading-[67px] font-light font-mono m:text-23xl sm:leading-[48px]">
               <p className="m-0">Seize opportunity</p>
               <p className="m-0">&nbsp;</p>
-              <p className="m-0">Defi limits</p>
+              <p className="m-0">DeFi limits</p>
             </div>
           </div>
         </div>

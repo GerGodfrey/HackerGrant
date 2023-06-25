@@ -43,15 +43,9 @@ const Apply: NextPage = () => {
               to help fund the amount you need to go out there and compete.
             </p>
             <p className="m-0">&nbsp;</p>
-            <p className="m-0">{`Unleash your coding superpowers, seize the opportunity, and let HackerGrant help you fulfill your dreams. `}</p>
+            
           </div>
           <FormWrapper />
-
-          <img
-            className="absolute top-[506px] left-[820.5px] w-[436px] h-[940px]"
-            alt=""
-            src="/nouns.svg"
-          />
         </div>
       </div>
       <FooterSection />
