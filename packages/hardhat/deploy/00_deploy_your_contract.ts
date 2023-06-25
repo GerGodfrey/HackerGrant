@@ -41,6 +41,26 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     autoMine: true,
   });
 
+  await deploy("onlyDonate2", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [100,1],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
+
+  await deploy("onlyDonate3", {
+    from: deployer,
+    // Contract constructor arguments
+    args: [5,7],
+    log: true,
+    // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
+    // automatically mining the contract deployment transaction. There is no effect on live networks.
+    autoMine: true,
+  });
+
   // Get the deployed contract
   // const yourContract = await hre.ethers.getContract("YourContract", deployer);
 };
@@ -51,3 +71,5 @@ export default deployYourContract;
 // e.g. yarn deploy --tags YourContract
 //deployYourContract.tags = ["YourContract"];
 deployYourContract.tags = ["onlyDonate"];
+deployYourContract.tags = ["onlyDonate2"];
+deployYourContract.tags = ["onlyDonate3"];
