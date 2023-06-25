@@ -13,8 +13,12 @@ While the Ethereum developer community is expanding and thriving,
 ## Proposed Solution
 
 ## Platform Components
+<p align="center">
+    <br>
+        <img src="images/components.jpg" width="1000"/>
+    <br>
+<p>
 
-<img src="images/components.jpg" width="500"/>
 
 The Platform consists of the following main components:
 1.	**C1:** This displays the main concerts and provides various search options to find other available events.
