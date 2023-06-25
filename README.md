@@ -1,7 +1,7 @@
 # The Hacker Grant Repository
 <p align="center">
     <br>
-    <img src="pages/img/logo_fanlane.png" width="500"/>
+    <img src="/Black%20Green%20Cool%20Cat%20Illustrative%20Typographic%20T-Shirt.png" width="500"/>
     <br>
 <p>
 
