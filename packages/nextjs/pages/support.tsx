@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
 import { useRouter } from "next/router";
 import HeaderTop from "../components/figma/header-top";
 import SponsorshipFormContainer from "../components/figma/sponsorship-form-container";
 import TechExpoContainer from "../components/figma/tech-expo-container";
 import FooterSection from "../components/figma/footer-section";
+import { Carousel } from "../components/Carousel";
+
 
 const Support: NextPage = () => {
   const router = useRouter();
@@ -21,6 +23,11 @@ const Support: NextPage = () => {
     router.push("/sponsorship-application-as-a");
   }, [router]);
 
+  const ITEMS = useMemo(() => ([
+    { name_title: 'Item 1', imageUrl: '/../noun-example.svg', progress: 20 },
+    { name_title: 'Item 2', imageUrl: '/../noun-example.svg', progress: 50 },
+    { name_title: 'Item 3', imageUrl: '/../noun-example.svg', progress: 80 },
+  ]), []);
   return (
     <div className="relative bg-studio-darkmode-allwhite-ffffff w-full overflow-hidden flex flex-col items-start justify-start text-left text-5xl text-gray-400 font-mono">
       <HeaderTop
@@ -28,6 +35,7 @@ const Support: NextPage = () => {
         onFickleflightLogoClick={onFickleflightLogoClick}
         onYourProfileTextClick={onYourProfileTextClick}
       />
+      <Carousel items={ITEMS} />
       <SponsorshipFormContainer sponsorshipText="Support participants" />
       <div className="self-stretch h-[1692px] flex flex-col py-[50px] px-20 box-border items-center justify-start gap-[50px] lg:p-10 lg:box-border md:py-5 md:px-6 md:box-border">
         <div className="relative w-[1279px] h-[440px] overflow-hidden shrink-0">
