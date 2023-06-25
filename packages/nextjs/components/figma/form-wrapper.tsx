@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { Octokit } from "@octokit/rest";
-
+import type { ISuccessResult } from "@worldcoin/idkit";
 
 
 const IDKitWidget = dynamic(() => import('@worldcoin/idkit')
@@ -180,7 +180,7 @@ const FormWrapper: NextPage = () => {
 
   //OTHERS 
 
-  function onSuccess(result: any){
+  const onSuccess = (result: ISuccessResult) => {
     //TODO : guardarlo en firebase o algo y matchear las solicitudes
     console.log("resultadoooooooo",result);
     setworldConnect(true)
@@ -229,6 +229,30 @@ const FormWrapper: NextPage = () => {
     })
 
   };
+
+  const handleProof = async (result: ISuccessResult) => {
+		const reqBody = {
+			merkle_root: result.merkle_root,
+			nullifier_hash: result.nullifier_hash,
+			proof: result.proof,
+			credential_type: result.credential_type,
+			action: "",
+			signal: "",
+		};
+		fetch("/api/verify/", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(reqBody),
+		}).then(async (res: Response) => {
+			if (res.status == 200) {
+				console.log("Successfully verified credential.")
+			} else {
+				throw new Error("Error: " + (await res.json()).code) ?? "Unknown error.";
+			}
+		});
+	};
 
 
   return (
@@ -513,9 +537,11 @@ const FormWrapper: NextPage = () => {
           <div className="col-span-1">
             <div  style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "300vh" }}>
               <IDKitWidget
+                onSuccess={onSuccess}
+                handleVerify={handleProof}
                 //action="my_action"
                 //signal="my_signal"
-                onSuccess={(result: any) => onSuccess(result)}
+                
                 //handleVerify={handleProof}
                 app_id="app_fc30e6754b7a0020c89f355d629c169b"
                 //onSuccess={result => console.log(result)}
