@@ -1,5 +1,6 @@
 import { CardProps } from './types';
-import {ProgressBar} from './ProgressBar';
+import { ProgressBar  } from './ProgressBar';
+import Link from 'next/link';
 
 export const Card: React.FC<CardProps> = ({ item: { name_title, imageUrl, progress } }) => {
     return (
