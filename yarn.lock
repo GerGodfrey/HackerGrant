@@ -2851,6 +2851,7 @@ __metadata:
     "@types/react-copy-to-clipboard": ^5.0.4
     "@typescript-eslint/eslint-plugin": ^5.39.0
     "@uniswap/sdk": ^3.0.3
+    "@worldcoin/idkit": ^0.5.1
     autoprefixer: ^10.4.12
     daisyui: ^2.31.0
     eslint: ^8.15.0
@@ -13859,7 +13860,6 @@ __metadata:
   resolution: "se-2@workspace:."
   dependencies:
     "@octokit/rest": ^19.0.13
-    "@worldcoin/idkit": ^0.5.1
     husky: ^8.0.1
     lint-staged: ^13.0.3
   languageName: unknown
