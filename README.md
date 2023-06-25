@@ -39,14 +39,14 @@ Our solution consist in a crowfunding platform to connect hackers and supporters
 
 
 The Platform consists of the following main components:
-1.	**Scaffold.eth** This displays the main concerts and provides various search options to find other available events.
-2.	**NEXT.js** To ensure compliance with the established requirements, users will be required to log in to Spotify to verify their affinity 
-3.	**Nouns:** Once authenticated, users can choose their preferred show and select a specific date on which the artist will perform.
-4.	**Quicknode:** After choosing the date, users can select the preferred zone and seat within the event venue.
-5.	**Langchain** Once the selections are complete, users will proceed to make the corresponding payment to acquire the chosen tickets.
-6. **WordID** This bot provides in-venue, real world feedback and functionalities. As of now, we can control a local plug, used as 
-7. **Airstack** Th
-8. **Polygon** Th
+1.	**Scaffold.eth**: Developtment framework that allows to setup the frontend to smart contracts. 
+2.	**NEXT.js**  to create full-stack Web applications by extending the latest React features
+3.	**Nouns:**  on-chain avatar community, our look & feel is inspired by the nouns universe
+4.	**Quicknode:** A set of APIs to input the info provided by the hacker, including his wallet activity
+5.	**Langchain** LLM model to assess the hacker's profile
+6. **WordID** The hacker will attest the information is accurate using this component 
+7. **Airstack** To verify that the hacker attended the hackaton querying the POAP sent to his wallet
+8. **Polygon** The blockchain to store and execute the smart contracts
 
 ## Our Source
 1. Web Page: https://hackergrant-gergodfrey.vercel.app/
