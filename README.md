@@ -42,11 +42,11 @@ We welcome any contributions to the development and improvement of The Hacker Gr
 3.	Ensure thorough testing of the changes.
 4.	Create a detailed pull request explaining the changes made and their purpose.
 ## Team
-•	Danya
-•	Francisco 
-•	Diego
-•	Gerardo
-•	Gustavo
+Danya
+Francisco 
+Diego
+Gerardo
+Gustavo
 
 <p align="center">
     <br>
